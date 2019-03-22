@@ -31,9 +31,9 @@ for i=1:N
    for j=1:Nu
       if (i>=j)
          M(i,j)=s(i-j+1);
-      end;
-   end;
-end;
+      end
+   end
+end
 
 MP=zeros(N,D-1);
 for i=1:N
@@ -109,7 +109,7 @@ for i=7:czas_sym
    ek=yzad(i)-wyy(i);
    
    if fl_pomiar_zak==1
-      for n=D-1:-1:2;
+      for n=D-1:-1:2
          deltazp(n)=deltazp(n-1);
       end
       deltazp(1)=zaklocenie(i)-zaklocenie(i-1);
