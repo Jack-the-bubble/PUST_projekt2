@@ -7,11 +7,18 @@ s = y(2:end);
 
 clear y u;
 
+
+zad6 = 0;
+RAND = 1;
 % Horyzonty
 
+% najlepsze bez zakłóceń
 D=210;
+Dz=216;
 N=23;
 Nu=1;
+
+
 
 % Wsp�czynnik kary za przyrosty sterowania
 
@@ -35,20 +42,20 @@ for i=1:N
          MP(i,j)=s(i+j)-s(j);
       else
          MP(i,j)=s(D)-s(j);
-      end;      
-   end;
-end;
+      end      
+   end
+end
 
-MZP=zeros(N,D-1);
+MZP=zeros(N,Dz-1);
 for i=1:N
    for j=1:D-1
       if i+j<=D
          MZP(i,j)=sz(i+j)-sz(j);
       else
          MZP(i,j)=sz(D)-sz(j);
-      end;      
-   end;
-end;
+      end      
+   end
+end
 
 % Obliczanie parametr�w regulatora
 
@@ -64,15 +71,30 @@ ke=sum(K(1,:));
 czas_sym=400;%10
 
 % Zak��cenie mierzalne
-fl_pomiar_zak=0; % 1 - pomiar zak��cenia wykorzystany w regulatorze
+fl_pomiar_zak=1; % 1 - pomiar zak��cenia wykorzystany w regulatorze
 % chwila_usterk=30;
 % Warunki pocz�tkowe
 
 yzad=ones(czas_sym, 1)*1;
-zaklocenia=ones(czas_sym, 1)*0;
+
+if zad6==0
+zaklocenie=ones(czas_sym, 1);
+zaklocenie(1:134)=0;
+elseif zad6 == 1
+    zaklocenie(1:134) = 0;
+    for i=135:czas_sym
+        zaklocenie(i)=sin(i*pi/16);
+    end
+end
+
+if RAND == 1
+   for i = 1: czas_sym
+       zaklocenie(i)=zaklocenie(i)+randn()*0.1;
+   end
+end
 
 deltaup=zeros(D-1, 1);
-deltazp=zeros(D-1, 1);
+deltazp=zeros(Dz-1, 1);
 
 % G��wna p�tla programu
 wyy = zeros(czas_sym, 1);
@@ -81,32 +103,28 @@ uk = 0;
 for i=7:czas_sym
    
    % Obiekt
-   wyy(i) = symulacja_obiektu3y(wyu(i-5), wyu(i-6), zaklocenia(i-2), zaklocenia(i-3), wyy(i-1), wyy(i-2));
+   wyy(i) = symulacja_obiektu3y(wyu(i-5), wyu(i-6), zaklocenie(i-2), zaklocenie(i-3), wyy(i-1), wyy(i-2));
    % Regulator DMC
    
    ek=yzad(i)-wyy(i);
    
-%    if fl_pomiar_zak==1
-%       for n=D-1:-1:2;
-%          deltazp(n)=deltazp(n-1);
-%       end
-%       deltazp(1)=zaklocenie(i)-zaklocenie(i-1);
-%    end      
+   if fl_pomiar_zak==1
+      for n=D-1:-1:2;
+         deltazp(n)=deltazp(n-1);
+      end
+      deltazp(1)=zaklocenie(i)-zaklocenie(i-1);
+   end      
    
    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    % Prawo regulacji
    
    deltauk=ke*ek-ku*deltaup;
-%    if fl_pomiar_zak==1
-%       deltauk=deltauk-kz*deltazp';
-%    end         
+   if fl_pomiar_zak==1
+      deltauk=deltauk-kz*deltazp;
+   end         
    
    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
    
-%    for n=D-1:-1:2;
-%       deltaup(n)=deltaup(n-1);
-%    end
-%    deltaup(1)=deltauk;
    deltaup = [deltauk; deltaup(1:end-1)];
    wyu(i)=wyu(i-1)+deltauk;
    
