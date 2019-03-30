@@ -1,0 +1,39 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=1,
+xmax=10,
+xlabel style={font=\color{white!15!black}},
+xlabel={U statyczne},
+ymin=0,
+ymax=20,
+ylabel style={font=\color{white!15!black}},
+ylabel={Y statyczne},
+axis background/.style={fill=white},
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1]
+  table[row sep=crcr]{%
+1	1.8857345678411\\
+2	3.77146913568221\\
+3	5.65720370352323\\
+4	7.54293827136441\\
+5	9.42867283920536\\
+6	11.3144074070465\\
+7	13.2001419748875\\
+8	15.0858765427288\\
+9	16.9716111105702\\
+10	18.8573456784107\\
+};
+\addlegendentry{data1}
+
+\end{axis}
+\end{tikzpicture}%

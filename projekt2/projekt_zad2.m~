@@ -1,0 +1,85 @@
+% obliczanie wzmocnienia statycznego torów wejście-wyjście i
+% zakłócenie-wyjście
+
+clear  all;
+
+iterNum = 500;
+licz_skok=10;
+
+for i = 1 : licz_skok
+    u = ones(iterNum, 1)*0*i;
+    z = ones(iterNum, 1)*1*i;
+    y = ones(iterNum, 1)*0;
+for k = 7:iterNum
+    y(k) = symulacja_obiektu3y(u(k-5), u(k-6), z(k-2), z(k-3), y(k-1), y(k-2));
+end
+    figure(1);
+    subplot(2,1,1);
+    plot(y);
+    xlabel('k');
+    ylabel('y');
+    xlim([0 iterNum]);
+    hold on;
+    
+    subplot(2,1,2);
+    plot(u);
+    
+    xlabel('k');
+    ylabel('u');
+    hold on;
+    
+    yStat(i) = y(iterNum);
+end
+hold off;
+
+
+
+figure(2);
+plot(1:licz_skok,yStat);
+xlabel('Z statyczne');
+ylabel('Y statyczne');
+% matlab2tikz('sprawko_dane/matlabtotikz/char_stat_Z_zmien.tex', 'showInfo', false);
+
+wzmStatZ = (yStat(licz_skok)-yStat(1))/licz_skok;
+
+for i = 1 : licz_skok
+    u = ones(iterNum, 1)*1*i;
+    z = ones(iterNum, 1)*0*i;
+    y = ones(iterNum, 1)*0;
+for k = 7:iterNum
+    y(k) = symulacja_obiektu3y(u(k-5), u(k-6), z(k-2), z(k-3), y(k-1), y(k-2));
+end
+    figure(3);
+    plot(y)
+    hold on;
+    yStat(i) = y(iterNum);
+end
+
+wzmStatU = (yStat(licz_skok)-yStat(1))/licz_skok;
+
+hold off;
+figure(4);
+plot(yStat);
+plot(1:licz_skok,yStat);
+xlabel('U statyczne');
+ylabel('Y statyczne');
+matlab2tikz('sprawko_dane/matlabtotikz/char_stat_U_zmien.tex', 'showInfo', false);
+
+% nazwa1 = sprintf('dane_zad_5/DMC/U__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
+% nazwa2 = sprintf('dane_zad_5/DMC/Y__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
+% nazwa3 = 'dane_zad_5/DMC/Yzad.txt';
+% 
+% file = fopen(nazwa1, 'w');
+% A = [(1:iterNum);U'];
+% fprintf(file, '%4.3f %.3f \n',A);
+% fclose(file);
+% 
+% file = fopen(nazwa2, 'w');
+% B = [(1:iterNum);Y'];
+% fprintf(file, '%4.3f %.3f \n',B);
+% fclose(file);
+% 
+% file = fopen(nazwa3, 'w');
+% C = [(1:iterNum);(yZad+Ypp)'];
+% fprintf(file, '%4.3f %.3f \n',C);
+% fclose(file);
