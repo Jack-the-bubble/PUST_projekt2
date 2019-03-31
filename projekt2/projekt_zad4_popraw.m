@@ -14,9 +14,9 @@ czas_sym=400;
 moment_zad = 10;
 
 %czy zakłócenie ma wystapić (0-nie, 1-tak)
-zaklocenie=1;
+zak=0;
 %czy zakłócenie jest mierzone (0-nie, 1-tak)
-pomiar_zak=1;
+pomiar_zak=0;
 %moment wystąpienia zakłócenia
 moment_zak = 134;
 %czy zakłócenie ma mieć postać sinusoidy (0-nie, 1-tak)
@@ -104,11 +104,13 @@ deltaz=0;
 %aktualna zmiana sterowania
 deltauk=0;
 
+zaklocenie=zeros(czas_sym, 1);
+
 %utworzenie odpowiedniego wektora z zakłóceniami
 if zak_sin==0
-    if zaklocenie==0
+    if zak==0
         zaklocenie=zeros(czas_sym, 1);
-    elseif zaklocenie==1
+    elseif zak==1
         zaklocenie=ones(czas_sym, 1);
         zaklocenie(1:moment_zak)=0;
     end
@@ -170,7 +172,7 @@ xlabel('k');
 legend('u');
 ylabel('u');
 
-if(zaklocenie==0)
+if(zak==0)
     nazwa1 = sprintf('sprawko_dane/DMC_bez_zak/U__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,wskaznikDMC);
     nazwa2 = sprintf('sprawko_dane/DMC_bez_zak/Y__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,wskaznikDMC);
     nazwa3 = 'sprawko_dane/DMC_bez_zak/Yzad.txt';
@@ -198,17 +200,17 @@ else
     end
 end
  
-file = fopen(nazwa1, 'w');
-A = [(1:czas_sym);u'];
-fprintf(file, '%4.3f %.3f \n',A);
-fclose(file);
-
-file = fopen(nazwa2, 'w');
-B = [(1:czas_sym);y'];
-fprintf(file, '%4.3f %.3f \n',B);
-fclose(file);
-
-file = fopen(nazwa3, 'w');
-C = [(1:czas_sym);yzad'];
-fprintf(file, '%4.3f %.3f \n',C);
-fclose(file);
+% file = fopen(nazwa1, 'w');
+% A = [(1:czas_sym);u'];
+% fprintf(file, '%4.3f %.3f \n',A);
+% fclose(file);
+% 
+% file = fopen(nazwa2, 'w');
+% B = [(1:czas_sym);y'];
+% fprintf(file, '%4.3f %.3f \n',B);
+% fclose(file);
+% 
+% file = fopen(nazwa3, 'w');
+% C = [(1:czas_sym);yzad'];
+% fprintf(file, '%4.3f %.3f \n',C);
+% fclose(file);
