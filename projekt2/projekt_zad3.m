@@ -2,7 +2,7 @@
 
 clear  all;
 
-iterNum = 500;
+iterNum = 300;
 
 % skok zakłóceń
 
@@ -27,21 +27,14 @@ end
     figure(2);
     plot(y)
     
-    % nazwa1 = sprintf('dane_zad_5/DMC/U__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
-% nazwa2 = sprintf('dane_zad_5/DMC/Y__DMC_D=%g_N=%g_Nu=%g_L=%g.txt',D,N,Nu,lambda);
-% nazwa3 = 'dane_zad_5/DMC/Yzad.txt';
-% 
+% nazwa1 = 'sprawko_dane/odp_dmc_u.txt';
+% nazwa2 = 'sprawko_dane/odp_dmc_z.txt';% 
 % file = fopen(nazwa1, 'w');
-% A = [(1:iterNum);U'];
+% A = [(1:iterNum);y'];
 % fprintf(file, '%4.3f %.3f \n',A);
 % fclose(file);
 % 
 % file = fopen(nazwa2, 'w');
-% B = [(1:iterNum);Y'];
+% B = [(1:iterNum);yz'];
 % fprintf(file, '%4.3f %.3f \n',B);
-% fclose(file);
-% 
-% file = fopen(nazwa3, 'w');
-% C = [(1:iterNum);(yZad+Ypp)'];
-% fprintf(file, '%4.3f %.3f \n',C);
 % fclose(file);
