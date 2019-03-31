@@ -12,9 +12,9 @@ iterNum = 300;
 for k = 7:iterNum
     yz(k) = symulacja_obiektu3y(u(k-5), u(k-6), z(k-2), z(k-3), yz(k-1), yz(k-2));
 end
-    figure(1);
-    
-    plot(yz)
+%     figure(1);
+%     
+%     plot(yz)
 
     % skok sterowania
 
@@ -24,8 +24,8 @@ end
 for k = 7:iterNum
     y(k) = symulacja_obiektu3y(u(k-5), u(k-6), z(k-2), z(k-3), y(k-1), y(k-2));
 end
-    figure(2);
-    plot(y)
+%     figure(2);
+  %   plot(y)
     
 % nazwa1 = 'sprawko_dane/odp_dmc_u.txt';
 % nazwa2 = 'sprawko_dane/odp_dmc_z.txt';% 

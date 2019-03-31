@@ -14,9 +14,9 @@ czas_sym=400;
 moment_zad = 10;
 
 %czy zakłócenie ma wystapić (0-nie, 1-tak)
-zaklocenie=1;
+zaklocenie=0;
 %czy zakłócenie jest mierzone (0-nie, 1-tak)
-pomiar_zak=1;
+pomiar_zak=0;
 %moment wystąpienia zakłócenia
 moment_zak = 134;
 %czy zakłócenie ma mieć postać sinusoidy (0-nie, 1-tak)
@@ -25,8 +25,6 @@ zak_sin = 0;
 szum = 0;
 %współczynnik skalujacy wartości szumu
 wsp_skal_szum = 0.1;
-%amplituda zakłócenia w postaci sinusoidy
-sin_A = 0.1;
 
 %horyzont dynamiki regulatora
 D=230;
@@ -115,7 +113,7 @@ if zak_sin==0
 elseif zak_sin == 1
     zaklocenie(1:moment_zak) = 0;
     for i=135:czas_sym
-        zaklocenie(i)=sin_A*sin(i*pi/16);
+        zaklocenie(i)=0.1*sin(i*pi/16);
     end
 end
 if szum == 1
@@ -181,34 +179,25 @@ else
             nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_Dz=%g.txt',wskaznikDMC,Dz);
             nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
         else
-            nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_Dz=%g_sin=%g_.txt',wskaznikDMC,Dz,sin_A);
-            nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_Dz=%g_sin=%g_.txt',wskaznikDMC,Dz,sin_A);
-            nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
-        end
+            
     else(pomiar_zak == 0)
-        if(zak_sin == 0)
-            nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_bez_pom.txt',wskaznikDMC);
-            nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_bez_pom.txt',wskaznikDMC);
-            nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
-        else
-            nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_bez_pom_sin=%g_.txt',wskaznikDMC,sin_A);
-            nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_bez_pom_sin=%g_.txt',wskaznikDMC,sin_A);
-            nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
-        end
+        nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_bez_pom.txt',wskaznikDMC);
+        nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_bez_pom.txt',wskaznikDMC);
+        nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
     end
 end
  
-file = fopen(nazwa1, 'w');
-A = [(1:czas_sym);u'];
-fprintf(file, '%4.3f %.3f \n',A);
-fclose(file);
-
-file = fopen(nazwa2, 'w');
-B = [(1:czas_sym);y'];
-fprintf(file, '%4.3f %.3f \n',B);
-fclose(file);
-
-file = fopen(nazwa3, 'w');
-C = [(1:czas_sym);yzad'];
-fprintf(file, '%4.3f %.3f \n',C);
-fclose(file);
+% file = fopen(nazwa1, 'w');
+% A = [(1:czas_sym);u'];
+% fprintf(file, '%4.3f %.3f \n',A);
+% fclose(file);
+% 
+% file = fopen(nazwa2, 'w');
+% B = [(1:czas_sym);y'];
+% fprintf(file, '%4.3f %.3f \n',B);
+% fclose(file);
+% 
+% file = fopen(nazwa3, 'w');
+% C = [(1:czas_sym);yzad'];
+% fprintf(file, '%4.3f %.3f \n',C);
+% fclose(file);
