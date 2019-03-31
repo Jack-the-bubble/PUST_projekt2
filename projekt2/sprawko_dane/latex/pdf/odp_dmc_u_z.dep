@@ -1,0 +1,2 @@
+pdf/odp_dmc_u_z.pdf: ../odp_dmc_u.txt
+pdf/odp_dmc_u_z.pdf: ../odp_dmc_z.txt

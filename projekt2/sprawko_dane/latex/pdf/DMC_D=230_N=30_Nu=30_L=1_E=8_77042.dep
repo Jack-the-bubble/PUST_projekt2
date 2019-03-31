@@ -1,0 +1,3 @@
+pdf/DMC_D=230_N=30_Nu=30_L=1_E=8_77042.pdf: ../DMC_bez_zak/Y__DMC_D=230_N=30_Nu=30_L=1_E=8.77042_.txt
+pdf/DMC_D=230_N=30_Nu=30_L=1_E=8_77042.pdf: ../DMC_bez_zak/Yzad.txt
+pdf/DMC_D=230_N=30_Nu=30_L=1_E=8_77042.pdf: ../DMC_bez_zak/U__DMC_D=230_N=30_Nu=30_L=1_E=8.77042_.txt

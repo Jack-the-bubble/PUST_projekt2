@@ -1,0 +1,2 @@
+pdf/por_odp_model_rzecz.pdf: ../lab_odp_mod.txt
+pdf/por_odp_model_rzecz.pdf: ../lab_odp_rzecz.txt

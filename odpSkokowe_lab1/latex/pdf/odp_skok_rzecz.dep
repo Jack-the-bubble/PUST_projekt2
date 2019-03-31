@@ -1,0 +1,6 @@
+pdf/odp_skok_rzecz.pdf: ../odp_skok_dz=20.txt
+pdf/odp_skok_rzecz.pdf: ../odp_skok_dz=40.txt
+pdf/odp_skok_rzecz.pdf: ../odp_skok_dz=60.txt
+pdf/odp_skok_rzecz.pdf: ../z20.txt
+pdf/odp_skok_rzecz.pdf: ../z40.txt
+pdf/odp_skok_rzecz.pdf: ../z60.txt

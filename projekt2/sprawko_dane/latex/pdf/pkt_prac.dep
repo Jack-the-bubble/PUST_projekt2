@@ -1,0 +1,3 @@
+pdf/pkt_prac.pdf: ../pkt_prac_z_u=0.txt
+pdf/pkt_prac.pdf: ../pkt_prac_z_u=1.txt
+pdf/pkt_prac.pdf: ../pkt_prac_z_u=2.txt

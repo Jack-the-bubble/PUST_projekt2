@@ -1,0 +1,3 @@
+pdf/DMC_D=230_N=50_Nu=4_L=4_E=11_1088.pdf: ../DMC_bez_zak/Y__DMC_D=230_N=50_Nu=4_L=4_E=11.1088_.txt
+pdf/DMC_D=230_N=50_Nu=4_L=4_E=11_1088.pdf: ../DMC_bez_zak/Yzad.txt
+pdf/DMC_D=230_N=50_Nu=4_L=4_E=11_1088.pdf: ../DMC_bez_zak/U__DMC_D=230_N=50_Nu=4_L=4_E=11.1088_.txt
