@@ -33,6 +33,7 @@ a = 30; %amplituda zaklocenia
 %REGULATOR DMC -----------------------------------------------------
 %horyzonty
 D = 734;
+Dz = 
 N = 170;
 Nu = 40;
 lambda = 2;
