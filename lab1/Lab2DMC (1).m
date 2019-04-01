@@ -52,7 +52,7 @@ dZpast = zeros(Dz, 1);
 dz=0;
 
 zaklocenie=zeros(czas_sym, 1);
-zaklocenie(251:end) = a;
+zaklocenie(250:end) = a;
 
 % Macierz M
 M=zeros(N,Nu);
