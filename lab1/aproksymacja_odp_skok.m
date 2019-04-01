@@ -50,7 +50,7 @@ load('step-response28z60.mat');
 
     wartosc_skoku_U = 60; %40 - 28
 
-    Ynorm = (step_response - Ypp)./wartosc_skoku_U;
+    YnormZ = (step_response - Ypp)./wartosc_skoku_U;
 
     iterNum = length(step_response); %length(step_response)
     
@@ -74,7 +74,7 @@ load('step-response28z60.mat');
       stairs(y);
       hold off;
       hold on;
-      plot(Ynorm);
+      plot(YnormZ);
       hold off;
  %Ynorm=y;
  
@@ -88,7 +88,7 @@ load('step-response28z60.mat');
  fclose(file);
  
 file = fopen(nazwa2, 'w');
-B = [(1:length(Ynorm));Ynorm];
+B = [(1:length(YnormZ));YnormZ];
 fprintf(file, '%4.3f %.3f \n',B);
 fclose(file);
       
