@@ -1,0 +1,3 @@
+pdf/dmc_zak_niemierz_skok_15.pdf: ../dane_txt/Y__dmc_zak_niemierz_skok_15.txt
+pdf/dmc_zak_niemierz_skok_15.pdf: ../dane_txt/Yzad__dmc_zak_niemierz_skok_15.txt
+pdf/dmc_zak_niemierz_skok_15.pdf: ../dane_txt/U__dmc_zak_niemierz_skok_15.txt
