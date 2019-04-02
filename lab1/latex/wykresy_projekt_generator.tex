@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+	
+	
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/dmc_bez_zak_N=150_Nu=15_lambda=01}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=650,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../txt/Y__dmc_N=150_Nu=15_lambda=01.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../txt/Yzad__dmc_N=150_Nu=15_lambda=01.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=650, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../txt/U__dmc_N=150_Nu=15_lambda=01.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/dmc_bez_zak_N=170_Nu=40_lambda=2}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=650,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../txt/Y__dmc_N=170_Nu=40_lambda=2.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../txt/Yzad__dmc_N=170_Nu=40_lambda=2.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=650, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../txt/U__dmc_N=170_Nu=40_lambda=2.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+
+\end{document}

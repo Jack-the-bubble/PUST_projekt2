@@ -1,0 +1,3 @@
+pdf/dmc_bez_zak_N=170_Nu=40_lambda=2.pdf: ../txt/Y__dmc_N=170_Nu=40_lambda=2.txt
+pdf/dmc_bez_zak_N=170_Nu=40_lambda=2.pdf: ../txt/Yzad__dmc_N=170_Nu=40_lambda=2.txt
+pdf/dmc_bez_zak_N=170_Nu=40_lambda=2.pdf: ../txt/U__dmc_N=170_Nu=40_lambda=2.txt
