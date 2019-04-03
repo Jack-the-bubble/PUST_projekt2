@@ -24,9 +24,9 @@ zak_sin = 0;
 %czy ma wystąpić dodatkowe zakłócenie w postaci szumu
 szum = 1;
 %współczynnik skalujacy wartości szumu
-wsp_skal_szum = 0.5;
+wsp_skal_szum = 0.03;
 %amplituda zakłócenia w postaci sinusoidy
-sin_A = 0.1;
+sin_A = 0.7;
 
 %horyzont dynamiki regulatora
 D=230;
@@ -120,11 +120,11 @@ elseif zak_sin == 1
         zaklocenie(i)=sin_A*sin(i*pi/16);
     end
 end
-if szum == 1
-   for i = 1: czas_sym
-       zaklocenie(i)=zaklocenie(i)+randn()*wsp_skal_szum;
-   end
-end
+% if szum == 1
+%    for i = 1: czas_sym
+%        zaklocenie(i)=zaklocenie(i)+randn()*wsp_skal_szum;
+%    end
+% end
 
 %początek pętli
 for i=7:czas_sym
@@ -138,7 +138,11 @@ for i=7:czas_sym
    %wyliczenie wartosci sterowania przy różnych warunkach
    
    if pomiar_zak==1
-      deltaz=zaklocenie(i)-zaklocenie(i-1);
+      if szum == 1
+          deltaz = zaklocenie(i) + randn()*wsp_skal_szum - zaklocenie(i-1) - randn()*wsp_skal_szum;
+      else
+          deltaz = zaklocenie(i) - zaklocenie(i-1);
+      end
       deltazp = [deltaz; deltazp(1:end-1)];
    end      
    
