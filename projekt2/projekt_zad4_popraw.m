@@ -14,17 +14,17 @@ czas_sym=400;
 moment_zad = 10;
 
 %czy zakłócenie ma wystapić (0-nie, 1-tak)
-zak=0;
+zak=1;
 %czy zakłócenie jest mierzone (0-nie, 1-tak)
-pomiar_zak=0;
+pomiar_zak=1;
 %moment wystąpienia zakłócenia
 moment_zak = 134;
 %czy zakłócenie ma mieć postać sinusoidy (0-nie, 1-tak)
 zak_sin = 0;
 %czy ma wystąpić dodatkowe zakłócenie w postaci szumu
-szum = 0;
+szum = 1;
 %współczynnik skalujacy wartości szumu
-wsp_skal_szum = 0.1;
+wsp_skal_szum = 0.5;
 %amplituda zakłócenia w postaci sinusoidy
 sin_A = 0.1;
 
@@ -178,16 +178,22 @@ if(zak==0)
     nazwa3 = 'sprawko_dane/DMC_bez_zak/Yzad.txt';
 else
     if(pomiar_zak == 1)
-        if(zak_sin == 0)
-            nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_Dz=%g.txt',wskaznikDMC,Dz);
-            nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_Dz=%g.txt',wskaznikDMC,Dz);
-            nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
-        else
+        if(zak_sin == 1)
             nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_Dz=%g_sin=%g_.txt',wskaznikDMC,Dz,sin_A);
             nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_Dz=%g_sin=%g_.txt',wskaznikDMC,Dz,sin_A);
             nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';
+        else
+            if(szum == 1)
+                nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_Dz=%g_szum=%g.txt',wskaznikDMC,Dz,wsp_skal_szum);
+                nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_Dz=%g_szum=%g.txt',wskaznikDMC,Dz,wsp_skal_szum);
+                nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt';    
+            else    
+                nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_Dz=%g.txt',wskaznikDMC,Dz);
+                nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_Dz=%g.txt',wskaznikDMC,Dz);
+                nazwa3 = 'sprawko_dane/DMC_zak/Yzad.txt'; 
+            end
         end
-    else(pomiar_zak == 0)
+    elseif (pomiar_zak == 0)
         if(zak_sin == 0)
             nazwa1 = sprintf('sprawko_dane/DMC_zak/U__DMC_E=%g_bez_pom.txt',wskaznikDMC);
             nazwa2 = sprintf('sprawko_dane/DMC_zak/Y__DMC_E=%g_bez_pom.txt',wskaznikDMC);
