@@ -1,0 +1,3 @@
+pdf/DMC_E=19_1424_Dz=229_sin=0_3_.pdf: ../DMC_zak/Y__DMC_E=19.1424_Dz=229_sin=0.3_.txt
+pdf/DMC_E=19_1424_Dz=229_sin=0_3_.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=19_1424_Dz=229_sin=0_3_.pdf: ../DMC_zak/U__DMC_E=19.1424_Dz=229_sin=0.3_.txt

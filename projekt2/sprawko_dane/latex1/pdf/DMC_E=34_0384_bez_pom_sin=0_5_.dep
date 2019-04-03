@@ -1,0 +1,3 @@
+pdf/DMC_E=34_0384_bez_pom_sin=0_5_.pdf: ../DMC_zak/Y__DMC_E=34.0384_bez_pom_sin=0.5_.txt
+pdf/DMC_E=34_0384_bez_pom_sin=0_5_.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=34_0384_bez_pom_sin=0_5_.pdf: ../DMC_zak/U__DMC_E=34.0384_bez_pom_sin=0.5_.txt

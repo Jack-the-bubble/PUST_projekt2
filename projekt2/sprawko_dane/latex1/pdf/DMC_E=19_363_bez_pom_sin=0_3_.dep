@@ -1,0 +1,3 @@
+pdf/DMC_E=19_363_bez_pom_sin=0_3_.pdf: ../DMC_zak/Y__DMC_E=19.363_bez_pom_sin=0.3_.txt
+pdf/DMC_E=19_363_bez_pom_sin=0_3_.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=19_363_bez_pom_sin=0_3_.pdf: ../DMC_zak/U__DMC_E=19.363_bez_pom_sin=0.3_.txt

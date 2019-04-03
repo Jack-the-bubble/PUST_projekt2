@@ -1,0 +1,265 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+		
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+\centering
+\tikzsetnextfilename{pdf/DMC_E=12_0013_Dz=229_sin=0_1_}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+width=\szer,height=\wys]
+\nextgroupplot
+[xmin=0, xmax=400,
+xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=12.0013_Dz=229_sin=0.1_.txt};
+\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+\legend{$y$,$y^{\mathrm{zad}}$}
+\nextgroupplot
+[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+\addplot[const plot, color=blue,semithick]
+file {../DMC_zak/U__DMC_E=12.0013_Dz=229_sin=0.1_.txt};
+\end{groupplot}
+\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=12_0257_bez_pom_sin=0_1_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=12.0257_bez_pom_sin=0.1_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=12.0257_bez_pom_sin=0.1_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=14_366_Dz=229_szum=0_1}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=14.366_Dz=229_szum=0.1.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=14.366_Dz=229_szum=0.1.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=14_5794_Dz=229}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=14.5794_Dz=229.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=14.5794_Dz=229.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=17_3632_Dz=229_szum=0_3}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=17.3632_Dz=229_szum=0.3.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=17.3632_Dz=229_szum=0.3.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=19_363_bez_pom_sin=0_3_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=19.363_bez_pom_sin=0.3_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=19.363_bez_pom_sin=0.3_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=19_1424_Dz=229_sin=0_3_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=19.1424_Dz=229_sin=0.3_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=19.1424_Dz=229_sin=0.3_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=20_2307_bez_pom}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=20.2307_bez_pom.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=20.2307_bez_pom.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=20_7447_Dz=229_szum=0_5}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=20.7447_Dz=229_szum=0.5.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=20.7447_Dz=229_szum=0.5.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=33_4251_Dz=229_sin=0_5_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=33.4251_Dz=229_sin=0.5_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=33.4251_Dz=229_sin=0.5_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_E=34_0384_bez_pom_sin=0_5_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=400,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../DMC_zak/Y__DMC_E=34.0384_bez_pom_sin=0.5_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../DMC_zak/Yzad.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=400, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../DMC_zak/U__DMC_E=34.0384_bez_pom_sin=0.5_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\end{document}

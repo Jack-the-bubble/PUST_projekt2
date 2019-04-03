@@ -1,0 +1,3 @@
+pdf/DMC_E=33_4251_Dz=229_sin=0_5_.pdf: ../DMC_zak/Y__DMC_E=33.4251_Dz=229_sin=0.5_.txt
+pdf/DMC_E=33_4251_Dz=229_sin=0_5_.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=33_4251_Dz=229_sin=0_5_.pdf: ../DMC_zak/U__DMC_E=33.4251_Dz=229_sin=0.5_.txt
