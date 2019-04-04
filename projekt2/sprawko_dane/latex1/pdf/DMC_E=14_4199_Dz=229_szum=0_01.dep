@@ -1,0 +1,3 @@
+pdf/DMC_E=14_4199_Dz=229_szum=0_01.pdf: ../DMC_zak/Y__DMC_E=14.4199_Dz=229_szum=0.01.txt
+pdf/DMC_E=14_4199_Dz=229_szum=0_01.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=14_4199_Dz=229_szum=0_01.pdf: ../DMC_zak/U__DMC_E=14.4199_Dz=229_szum=0.01.txt

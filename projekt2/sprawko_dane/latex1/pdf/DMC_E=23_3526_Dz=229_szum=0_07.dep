@@ -1,0 +1,3 @@
+pdf/DMC_E=23_3526_Dz=229_szum=0_07.pdf: ../DMC_zak/Y__DMC_E=23.3526_Dz=229_szum=0.07.txt
+pdf/DMC_E=23_3526_Dz=229_szum=0_07.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=23_3526_Dz=229_szum=0_07.pdf: ../DMC_zak/U__DMC_E=23.3526_Dz=229_szum=0.07.txt
