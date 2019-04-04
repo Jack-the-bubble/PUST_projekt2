@@ -1,0 +1,3 @@
+pdf/DMC_E=20_2074_Dz=229_szum=0_03.pdf: ../DMC_zak/Y__DMC_E=20.2074_Dz=229_szum=0.03.txt
+pdf/DMC_E=20_2074_Dz=229_szum=0_03.pdf: ../DMC_zak/Yzad.txt
+pdf/DMC_E=20_2074_Dz=229_szum=0_03.pdf: ../DMC_zak/U__DMC_E=20.2074_Dz=229_szum=0.03.txt

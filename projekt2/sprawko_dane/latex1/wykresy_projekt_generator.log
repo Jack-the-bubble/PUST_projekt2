@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  3 APR 2019 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  3 APR 2019 22:10
 entering extended mode
 **./wykresy_projekt_generator.tex
 (wykresy_projekt_generator.tex
@@ -981,12 +981,12 @@ _generator}\input{wykresy_projekt_generator}")...executed.
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pdf/DMC_E=14_366_Dz=229_szum=0_1" "\de
-f\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_generato
-r}"' ========
+n-error -interaction=batchmode -jobname "pdf/DMC_E=14_4199_Dz=229_szum=0_01" "\
+def\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_genera
+tor}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pdf/DMC_E=14_366_Dz=229_szum=0_1" "\def\tikzexternalrealjob{wykresy_projekt_g
-enerator}\input{wykresy_projekt_generator}")...executed.
+ "pdf/DMC_E=14_4199_Dz=229_szum=0_01" "\def\tikzexternalrealjob{wykresy_projekt
+_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
@@ -1005,12 +1005,12 @@ runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pdf/DMC_E=17_3632_Dz=229_szum=0_3" "\d
-ef\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_generat
-or}"' ========
+n-error -interaction=batchmode -jobname "pdf/DMC_E=20_2074_Dz=229_szum=0_03" "\
+def\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_genera
+tor}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pdf/DMC_E=17_3632_Dz=229_szum=0_3" "\def\tikzexternalrealjob{wykresy_projekt_
-generator}\input{wykresy_projekt_generator}")...executed.
+ "pdf/DMC_E=20_2074_Dz=229_szum=0_03" "\def\tikzexternalrealjob{wykresy_projekt
+_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
@@ -1053,12 +1053,12 @@ r}\input{wykresy_projekt_generator}")...executed.
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
-n-error -interaction=batchmode -jobname "pdf/DMC_E=20_7447_Dz=229_szum=0_5" "\d
-ef\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_generat
-or}"' ========
+n-error -interaction=batchmode -jobname "pdf/DMC_E=23_3526_Dz=229_szum=0_07" "\
+def\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_genera
+tor}"' ========
 runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
- "pdf/DMC_E=20_7447_Dz=229_szum=0_5" "\def\tikzexternalrealjob{wykresy_projekt_
-generator}\input{wykresy_projekt_generator}")...executed.
+ "pdf/DMC_E=23_3526_Dz=229_szum=0_07" "\def\tikzexternalrealjob{wykresy_projekt
+_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
@@ -1089,11 +1089,11 @@ _generator}\input{wykresy_projekt_generator}")...executed.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
 [1{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pdf/DM
 C_E=12_0013_Dz=229_sin=0_1_.pdf> <./pdf/DMC_E=12_0257_bez_pom_sin=0_1_.pdf>]
-[2 <./pdf/DMC_E=14_366_Dz=229_szum=0_1.pdf> <./pdf/DMC_E=14_5794_Dz=229.pdf>]
-[3 <./pdf/DMC_E=17_3632_Dz=229_szum=0_3.pdf> <./pdf/DMC_E=19_363_bez_pom_sin=0_
-3_.pdf>] [4 <./pdf/DMC_E=19_1424_Dz=229_sin=0_3_.pdf> <./pdf/DMC_E=20_2307_bez_
-pom.pdf>] [5 <./pdf/DMC_E=20_7447_Dz=229_szum=0_5.pdf> <./pdf/DMC_E=33_4251_Dz=
-229_sin=0_5_.pdf>] [6 <./pdf/DMC_E=34_0384_bez_pom_sin=0_5_.pdf>]
+[2 <./pdf/DMC_E=14_4199_Dz=229_szum=0_01.pdf> <./pdf/DMC_E=14_5794_Dz=229.pdf>]
+[3 <./pdf/DMC_E=20_2074_Dz=229_szum=0_03.pdf> <./pdf/DMC_E=19_363_bez_pom_sin=0
+_3_.pdf>] [4 <./pdf/DMC_E=19_1424_Dz=229_sin=0_3_.pdf> <./pdf/DMC_E=20_2307_bez
+_pom.pdf>] [5 <./pdf/DMC_E=23_3526_Dz=229_szum=0_07.pdf> <./pdf/DMC_E=33_4251_D
+z=229_sin=0_5_.pdf>] [6 <./pdf/DMC_E=34_0384_bez_pom_sin=0_5_.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
 
 (wykresy_projekt_generator.aux)
@@ -1103,7 +1103,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
  ) 
 Here is how much of TeX's memory you used:
  33892 strings out of 492946
- 849793 string characters out of 3125823
+ 849797 string characters out of 3125823
  926017 words of memory out of 3000000
  37360 multiletter control sequences out of 15000+200000
  536486 words of font info for 39 fonts, out of 3000000 for 9000
@@ -1115,7 +1115,7 @@ ublic/amsfonts/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Michal/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on wykresy_projekt_generator.pdf (6 pages, 281296 bytes).
+Output written on wykresy_projekt_generator.pdf (6 pages, 279463 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
